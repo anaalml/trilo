@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1">
+  <title>Trilo - Resumo do pedido</title>
+  <link rel="stylesheet" href="telaItemPedido.css">
+</head>
+<body>
+
+  <main class="tela">
+
+    <section class="painel">
+      <h1 class="titulo">Resumo do Pedido</h1>
+
+      <ul class="lista" id="listaItens" aria-label="Itens do pedido"></ul>
+
+      <p class="vazio" id="msgVazio" hidden>Seu pedido está vazio</p>
+
+      <p class="total" id="total" aria-live="polite">Total R$ 0,00</p>
+
+      <footer class="acoes">
+        <button type="button" id="btnCancelar" class="btn-acao btn-cancelar">Cancelar pedido</button>
+        <button type="button" id="btnConcluir" class="btn-acao btn-concluir">Concluir pedido</button>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="telaItemPedido.js"></script>
+</body>
+</html>

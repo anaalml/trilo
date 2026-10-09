@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1">
+  <title>Trilo - Toque para começar</title>
+  <link rel="stylesheet" href="telaDescanso.css">
+</head>
+<body>
+
+  <main class="tela">
+
+    <!-- Fundo decorativo -->
+    <svg class="fundo" viewBox="0 0 531 705" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="brilho">
+          <stop offset="0" stop-color="#fff" stop-opacity="0.95"/>
+          <stop offset="0.5" stop-color="#f6d9d4" stop-opacity="0.9"/>
+          <stop offset="1" stop-color="#f1cfc8" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Manchas do canto superior direito -->
+      <path d="M205,0 C205,35 240,55 285,95 C330,135 335,210 365,290 C385,345 400,420 450,415 C490,410 531,380 531,380 L531,0 Z" fill="#e9d4cd"/>
+      <path d="M222,0 C225,30 260,50 300,80 C345,115 350,200 380,250 C405,290 440,296 470,290 C510,282 531,250 531,230 L531,0 Z" fill="#e7c3ba"/>
+
+      <!-- Manchas do canto inferior esquerdo -->
+      <path d="M0,285 C20,250 45,215 80,210 C130,205 170,300 215,420 C240,490 270,540 295,553 L295,705 L0,705 Z" fill="#e9d4cd"/>
+      <path d="M0,420 C0,360 40,330 80,335 C130,340 170,420 200,480 C225,525 250,560 270,590 L270,705 L0,705 Z" fill="#e7c3ba"/>
+
+      <!-- Raio -->
+      <path d="M58,82 L47,118 L62,118 L52,163 L80,110 L65,110 L78,82 Z" fill="none" stroke="#f0cbd3" stroke-width="2.5" stroke-linejoin="round"/>
+
+      <!-- Brilho de 4 pontas -->
+      <path d="M400,92 Q402,114 424,118 Q402,122 400,144 Q398,122 376,118 Q398,114 400,92 Z" fill="#ecdde0"/>
+
+      <!-- Explosão de luz -->
+      <circle cx="68" cy="410" r="40" fill="url(#brilho)"/>
+      <g stroke="#f3d6d2" stroke-width="1.6" stroke-linecap="round">
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(0 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(15 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(30 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(45 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(60 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(75 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(90 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(105 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(120 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(135 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(150 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(165 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(180 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(195 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(210 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(225 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(240 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(255 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(270 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(285 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(300 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(315 68 410)"/>
+          <line x1="68" y1="370" x2="68" y2="390" transform="rotate(330 68 410)"/>
+          <line x1="68" y1="378" x2="68" y2="390" transform="rotate(345 68 410)"/>
+      </g>
+
+      <!-- Estrela vazada -->
+      <polygon points="386,438 396,462 424,456 404,476 418,500 392,492 380,516 372,490 348,486 366,470 350,446 374,458" fill="none" stroke="#f0cdd5" stroke-width="2.5" stroke-linejoin="round"/>
+    </svg>
+
+    <!-- Logo: salve o arquivo em img/logo-trilo.png (se não existir, aparece o texto) -->
+    <div class="logo-area">
+      <img src="img/logo-trilo.png" alt="Trilo" class="logo" id="logo">
+      <span class="logo-texto" id="logoTexto" hidden>Trilo</span>
+    </div>
+
+    <!-- Barra rosa: arraste para cima para começar -->
+    <button type="button" class="barra" id="barra" aria-label="Toque para começar. Arraste para cima ou pressione Enter.">
+      <svg class="barra-icone" viewBox="0 0 100 100" aria-hidden="true">
+        <g stroke="#ff6f4a" stroke-width="26" stroke-linecap="round">
+          <line x1="50" y1="18" x2="50" y2="82"/>
+          <line x1="50" y1="18" x2="50" y2="82" transform="rotate(45 50 50)"/>
+          <line x1="50" y1="18" x2="50" y2="82" transform="rotate(90 50 50)"/>
+          <line x1="50" y1="18" x2="50" y2="82" transform="rotate(135 50 50)"/>
+        </g>
+      </svg>
+      <span class="barra-texto">Toque para começar</span>
+    </button>
+
+  </main>
+
+  <script src="telaDescanso.js"></script>
+</body>
+</html>
