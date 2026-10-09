@@ -1,9 +1,9 @@
 /* ===== Variáveis ===== */
 :root {
-  --fundo: #dcdcdc;
-  --rosa-barra: #efb3bc;
-  --laranja-trilo: #ff6f4a;
-  --texto: #1c1c1c;
+  --fundo: #D9D9D9;
+  --rosa-barra: #EEB3BD;
+  --laranja-trilo: #F96E46;
+  --texto: #1F1D1E;
   --altura-barra: 224px;
 }
 
@@ -37,11 +37,70 @@ body {
   -webkit-user-select: none;
 }
 
-.fundo {
+/* ===== Container de Fundo e Elementos Decorativos ===== */
+.fundo-decorativo {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none; /* Não interfere no toque/clique da tela */
+}
+
+/* Base das manchas */
+.mancha {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Mancha do Canto Superior Direito */
+.mancha-tr {
+  top: 0;
+  right: 0;
+  width: 480px; /* Ajuste a largura conforme o arquivo exportado */
+  height: auto;
+}
+
+/* Mancha do Canto Inferior Esquerdo */
+.mancha-bl {
+  bottom: 140px;
+  left: 0;
+  width: 450px; /* Ajuste a largura conforme o arquivo exportado */
+  height: auto;
+
+}
+
+/* ===== Ícones Decorativos Soltos ===== */
+.icone-decorativo {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Raio (Canto superior esquerdo) */
+.raio {
+  top: 120px;
+  left: 80px;
+  width: 45px;
+}
+
+/* Brilho 4 pontas (Próximo à mancha superior) */
+.brilho-topo {
+  top: 130px;
+  right: 180px;
+  width: 60px;
+}
+
+/* Explosão de luz (Lateral esquerda média) */
+.explosao {
+  top: 520px;
+  left: 80px;
+  width: 120px;
+}
+
+/* Estrela vazada (Canto inferior direito) */
+.estrela {
+  bottom: 300px;
+  right: 140px;
+  width: 90px;
 }
 
 /* ===== Logo ===== */
@@ -52,6 +111,7 @@ body {
   right: 0;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 
 .logo {
@@ -89,6 +149,7 @@ body {
   cursor: grab;
   touch-action: none;            /* o navegador não rouba o gesto de arrastar */
   transform: translateY(calc(var(--dy) * -1px));
+  z-index: 10;                   /* Fica acima do fundo decorativo */
 
   /* Convite para arrastar: um pulinho a cada poucos segundos */
   animation: convite 4s ease-in-out 2s infinite;
