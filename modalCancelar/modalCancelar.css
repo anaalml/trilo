@@ -1,0 +1,82 @@
+/* =====================================================
+   Trilo - Modal "Realmente deseja cancelar?"
+   Compartilhado por todas as telas que têm o botão Cancelar.
+   O modal é inserido dentro de .tela, então ocupa só os 768x1024.
+   ===================================================== */
+
+.modal-cancelar {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.18);
+  animation: modal-cancelar-fundo 0.2s ease-out;
+}
+
+.modal-cancelar-caixa {
+  position: absolute;
+  top: 366px;
+  left: 50%;
+  width: 364px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 64px 30px 61px;
+  border-radius: 48px;
+  background: #F7DA95;
+  color: #1F1D1E;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  animation: modal-cancelar-caixa 0.2s ease-out;
+}
+
+.modal-cancelar-texto {
+  font-size: 31px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.modal-cancelar-botoes {
+  display: flex;
+  gap: 27px;
+}
+
+.modal-cancelar-botoes button {
+  width: 96px;
+  height: 74px;
+  border: none;
+  border-radius: 14px;
+  color: #1c1c1c;
+  font-family: inherit;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-cancelar-sim { background: #F3D283; }
+.modal-cancelar-nao { background: #EDC66B; }
+
+.modal-cancelar-botoes button:active {
+  filter: brightness(0.92);
+}
+
+.modal-cancelar-botoes button:focus-visible {
+  outline: 3px solid #1c1c1c;
+  outline-offset: 2px;
+}
+
+@keyframes modal-cancelar-fundo {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes modal-cancelar-caixa {
+  from { opacity: 0; transform: translateX(-50%) scale(0.94); }
+  to   { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-cancelar,
+  .modal-cancelar-caixa {
+    animation: none;
+  }
+}

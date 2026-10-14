@@ -1,0 +1,251 @@
+/* ===== Variáveis ===== */
+:root {
+  --fundo: #dcdcdc;
+  --rosa-painel: #efb3bc;
+  --rosa-borda: #e8a5a5;
+  --rosa-claro: #f6d5d5;
+  --laranja-botao: #ff7a4f;
+  --laranja-trilo: #ff6f4a;
+  --texto: #1c1c1c;
+  --aviso: #7a4a3c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #b9b9b9; /* fora da tela de 768x1024 */
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+.digitos:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 3px;
+}
+
+/* ===== Tela 768 x 1024 ===== */
+.tela {
+  position: relative;
+  width: 768px;
+  height: 1024px;
+  background: var(--fundo);
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ===== Voltar ===== */
+.btn-voltar {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  width: 150px;
+  height: 56px;
+  border: 3px solid var(--rosa-borda);
+  border-radius: 28px;
+  background: transparent;
+  color: var(--texto);
+  font-size: 20px;
+}
+
+.btn-voltar:active {
+  background: var(--rosa-claro);
+}
+
+/* ===== Logo ===== */
+.logo-area {
+  position: absolute;
+  top: 128px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 118px;
+  width: auto;
+}
+
+.logo-texto {
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--laranja-trilo);
+  letter-spacing: -2px;
+}
+
+/* ===== Painel rosa ===== */
+.painel {
+  position: absolute;
+  top: 295px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--rosa-painel);
+  border-radius: 44px 44px 0 0;
+}
+
+.titulo {
+  padding-top: 108px;
+  font-size: 29px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ===== Relógio ===== */
+.relogio {
+  position: absolute;
+  top: 230px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.par {
+  position: relative;
+}
+
+.digitos {
+  display: flex;
+  gap: 17px;
+  touch-action: none;       /* o navegador não rouba o gesto de arrastar */
+  cursor: ns-resize;
+  border-radius: 12px;
+}
+
+.caixa {
+  width: 94px;
+  height: 126px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--fundo);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  font-size: 66px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+/* Anel que aparece enquanto nenhum horário foi escolhido */
+.anel {
+  width: 32px;
+  height: 32px;
+  border: 4px solid #55555f;
+  border-radius: 50%;
+}
+
+/* Dois pontos */
+.dois-pontos {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin: 0 -2px;
+  transform: translateY(9px);
+}
+
+.dois-pontos i {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #f4f1f1;
+}
+
+/* Setas de apoio (acima e abaixo de cada par) */
+.seta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #fff;
+  opacity: 0.8;
+  touch-action: manipulation;
+}
+
+.seta svg {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.seta-cima  { bottom: calc(100% + 6px); }
+.seta-baixo { top: calc(100% + 6px); }
+
+.seta:active { opacity: 1; }
+
+/* Minutos travados em 00 quando a hora é 23 */
+.par.bloqueado .seta {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ===== Confirmar ===== */
+.btn-confirmar {
+  position: absolute;
+  top: 443px;
+  left: 50%;
+  width: 348px;
+  height: 56px;
+  transform: translateX(-50%);
+  border: none;
+  border-radius: 14px;
+  background: var(--laranja-botao);
+  color: #fff1ec;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.btn-confirmar:active {
+  filter: brightness(0.9);
+}
+
+.btn-confirmar:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ===== Aviso ===== */
+.aviso {
+  position: absolute;
+  top: 562px;
+  left: 50%;
+  width: 410px;
+  transform: translateX(-50%);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--aviso);
+  text-align: center;
+}

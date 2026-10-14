@@ -1,0 +1,136 @@
+/* ===== Variáveis ===== */
+:root {
+  --fundo: #D9D9D9;
+  --rosa-painel: #EEB3BD;   /* mesma cor da barra da telaDescanso */
+  --rosa-borda: #EEB3BD;
+  --rosa-claro: #f6d5d5;
+  --laranja-trilo: #F96E46;
+  --texto: #1F1D1E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #b9b9b9; /* fora da tela de 768x1024 */
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 2px;
+}
+
+/* ===== Tela 768 x 1024 ===== */
+.tela {
+  position: relative;
+  width: 768px;
+  height: 1024px;
+  background: var(--fundo);
+  overflow: hidden;
+}
+
+/* ===== Voltar ===== */
+.btn-voltar {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  width: 150px;
+  height: 56px;
+  border: 3px solid var(--rosa-borda);
+  border-radius: 28px;
+  background: transparent;
+  color: var(--texto);
+  font-size: 20px;
+}
+
+.btn-voltar:active {
+  background: var(--rosa-claro);
+}
+
+/* ===== Logo ===== */
+.logo-area {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+}
+
+.logo-texto {
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--laranja-trilo);
+  letter-spacing: -2px;
+}
+
+/* ===== Painel rosa =====
+   O topo (350px) é o mesmo ponto onde a barra da telaDescanso termina de subir. */
+.painel {
+  position: absolute;
+  top: 350px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--rosa-painel);
+  border-radius: 40px 40px 0 0;
+}
+
+.titulo {
+  padding-top: 92px;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ===== Opções ===== */
+.opcoes {
+  position: absolute;
+  top: 212px;
+  left: 91px;
+  right: 91px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.opcao {
+  width: 269px;
+  height: 344px;
+  padding: 0px 24px 0;
+  border: none;
+  border-radius: 18px;
+  background: var(--fundo);
+  color: var(--texto);
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+
+.opcao:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

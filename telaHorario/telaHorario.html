@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1">
+  <title>Trilo - Horário de retirada</title>
+  <link rel="stylesheet" href="telaHorario.css">
+</head>
+<body>
+
+  <main class="tela">
+
+    <button type="button" id="btnVoltar" class="btn-voltar">Voltar</button>
+
+    <!-- Logo: salve o arquivo em img/logo-trilo.png (se não existir, aparece o texto) -->
+    <div class="logo-area">
+      <img src="img/logo-trilo.png" alt="Trilo" class="logo" id="logo">
+      <span class="logo-texto" id="logoTexto" hidden>Trilo</span>
+    </div>
+
+    <section class="painel">
+      <h1 class="titulo">Que horário você gostaria de retirar?</h1>
+
+      <!-- Relógio: arraste para cima/baixo, use a roda do mouse, as setas ou as teclas ↑ ↓ -->
+      <div class="relogio">
+
+        <div class="par">
+          <button type="button" class="seta seta-cima" data-alvo="hora" data-delta="1" tabindex="-1" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
+          </button>
+          <div class="digitos" id="digitosHora" role="spinbutton" tabindex="0"
+               aria-label="Hora" aria-valuemin="7" aria-valuemax="23">
+            <span class="caixa" id="h1"></span>
+            <span class="caixa" id="h2"></span>
+          </div>
+          <button type="button" class="seta seta-baixo" data-alvo="hora" data-delta="-1" tabindex="-1" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></svg>
+          </button>
+        </div>
+
+        <div class="dois-pontos" aria-hidden="true"><i></i><i></i></div>
+
+        <div class="par" id="parMinuto">
+          <button type="button" class="seta seta-cima" data-alvo="minuto" data-delta="1" tabindex="-1" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
+          </button>
+          <div class="digitos" id="digitosMinuto" role="spinbutton" tabindex="0"
+               aria-label="Minutos" aria-valuemin="0" aria-valuemax="55">
+            <span class="caixa" id="m1"></span>
+            <span class="caixa" id="m2"></span>
+          </div>
+          <button type="button" class="seta seta-baixo" data-alvo="minuto" data-delta="-1" tabindex="-1" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      <button type="button" id="btnConfirmar" class="btn-confirmar" disabled>Confirmar horário</button>
+
+      <p class="aviso">
+        Você tem até 20 minutos para retirar seu pedido no balcão, caso não apareça ele será cancelado!
+      </p>
+    </section>
+
+  </main>
+
+  <script src="telaHorario.js"></script>
+</body>
+</html>
