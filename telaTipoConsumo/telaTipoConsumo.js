@@ -5,7 +5,11 @@
 // ----- Configurações (ajuste os nomes das suas outras telas) -----
 const PAGINA_VOLTAR = "telaDescanso.html";
 const PAGINA_COMER_AGORA = "telaPrincipal.html";
+<<<<<<< HEAD
 const PAGINA_AGENDAR_PEDIDO = "telaHorario.html";
+=======
+const PAGINA_AGENDAR_PEDIDO = "";   // ex.: "telaAgendamento.html"
+>>>>>>> d8a047c807e7fc267e13ce9382bf3c1b29bbb2f2
 
 // ----- Elementos -----
 const btnVoltar = document.getElementById("btnVoltar");
@@ -24,7 +28,10 @@ btnVoltar.addEventListener("click", () => {
 
 btnComerAgora.addEventListener("click", () => {
   guardarTipoConsumo("agora");
+<<<<<<< HEAD
   localStorage.removeItem("trilo_horario"); // se tinha agendado antes, esquece o horário
+=======
+>>>>>>> d8a047c807e7fc267e13ce9382bf3c1b29bbb2f2
   window.location.href = PAGINA_COMER_AGORA;
 });
 

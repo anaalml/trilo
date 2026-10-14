@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1">
+  <title>Trilo - Fazer pedido</title>
+  <link rel="stylesheet" href="telaPrincipal.css">
+</head>
+<body>
+
+  <main class="tela">
+
+    <!-- Topo -->
+    <header class="topo">
+      <button type="button" id="btnVoltar" class="btn-voltar">Voltar</button>
+
+      <!-- Coloque o arquivo da logo em img/logo-trilo.png.
+           Enquanto ele não existir, aparece o texto "Trilo". -->
+      <img src="/public/images/logo.svg" alt="Trilo" class="logo" id="logo">
+      <span class="logo-texto" id="logoTexto" hidden>Trilo</span>
+
+      <h1 class="titulo">O que gostaria de pedir hoje?</h1>
+    </header>
+
+    <!-- Categorias (scroll) + Produtos -->
+    <section class="cardapio">
+      <nav class="categorias" id="categorias" aria-label="Categorias"></nav>
+      <div class="produtos" id="produtos" aria-live="polite"></div>
+    </section>
+
+    <!-- Resumo do pedido -->
+    <section class="resumo vazio" id="resumo">
+      <button type="button" id="btnSeta" class="resumo-seta" aria-expanded="true" aria-label="Recolher pedido">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
+      </button>
+
+      <div class="resumo-conteudo" id="resumoConteudo">
+        <ul class="resumo-itens" id="resumoItens"></ul>
+        <p class="resumo-texto" id="resumoTexto" aria-live="polite">Seu pedido está vazio</p>
+      </div>
+    </section>
+
+    <!-- Ações -->
+    <footer class="acoes">
+      <button type="button" id="btnCancelar" class="btn-acao btn-cancelar">Cancelar pedido</button>
+      <button type="button" id="btnConcluir" class="btn-acao btn-concluir">Concluir pedido</button>
+    </footer>
+
+  </main>
+
+  <script src="telaPrincipal.js"></script>
+</body>
+</html>
