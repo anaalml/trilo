@@ -1,0 +1,136 @@
+/* ===== Variáveis ===== */
+:root {
+  --fundo: #D9D9D9;
+  --painel: #E0B4A7;
+  --rosa-icone: #E5A7A7;
+  --texto: #1F1D1E;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #b9b9b9; /* fora da tela de 768x1024 */
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 3px;
+}
+
+/* ===== Tela 768 x 1024 ===== */
+.tela {
+  position: relative;
+  width: 768px;
+  height: 1024px;
+  background: var(--fundo);
+  overflow: hidden;
+}
+
+/* ===== Painel ===== */
+.painel {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--painel);
+  border-radius: 38px 38px 0 0;
+}
+
+.titulo {
+  padding-top: 79px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ===== Total ===== */
+.total {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 805px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* ===== Opções (botões grandes) ===== */
+.opcoes {
+  position: absolute;
+  display: flex;
+}
+
+.opcao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: var(--fundo);
+  color: var(--rosa-icone);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  transition: transform 0.1s ease, background 0.1s ease;
+}
+
+.opcao:active {
+  transform: scale(0.97);
+  background: #f0d3d3;
+}
+
+.opcao-nome {
+  color: var(--texto);
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opcao { transition: none; }
+}
+
+/* ===== telaCartoes: 2 cartões ===== */
+.opcoes {
+  top: 334px;
+  left: 64px;
+  right: 64px;
+  gap: 75px;
+}
+
+.opcao {
+  flex: 1 1 0;
+  height: 257px;
+  padding-top: 50px;
+  border-radius: 34px;
+}
+
+.icone-cartao {
+  display: block;
+  width: 135px;
+  height: 97px;
+}
+
+.opcao-nome {
+  margin-top: 47px;
+}

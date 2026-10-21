@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1">
+  <title>Trilo - Cartão</title>
+  <link rel="stylesheet" href="telaCartoes.css">
+</head>
+<body>
+
+  <main class="tela">
+
+    <section class="painel">
+      <h1 class="titulo">Opções de Pagamento</h1>
+
+      <div class="opcoes">
+
+        <button type="button" id="btnCredito" class="opcao">
+          <img src="/public/images/cartao.svg" alt="">
+          <span class="opcao-nome">Crédito</span>
+        </button>
+
+        <button type="button" id="btnDebito" class="opcao">
+          <img src="/public/images/cartao.svg" alt="">
+          <span class="opcao-nome">Débito</span>
+        </button>
+
+      </div>
+
+      <p class="total" id="total" aria-live="polite">Total 0,00</p>
+    </section>
+
+  </main>
+
+  <script src="telaCartoes.js"></script>
+</body>
+</html>

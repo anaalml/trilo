@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1">
+  <title>Trilo - Pagamento</title>
+  <link rel="stylesheet" href="telaPagamento.css">
+</head>
+<body>
+
+  <main class="tela">
+
+    <section class="painel">
+      <h1 class="titulo">Opções de Pagamento</h1>
+
+      <div class="opcoes">
+
+        <button type="button" id="btnPix" class="opcao">
+          <span class="opcao-nome">PIX</span>
+          <span class="icone">
+            <img src="/public/images/pix.svg" alt="">
+          </span>
+        </button>
+
+        <button type="button" id="btnCartao" class="opcao">
+          <span class="opcao-nome">Cartão</span>
+          <span class="icone">
+            <img src="/public/images/cartao.svg" alt="">
+          </span>
+        </button>
+
+        <button type="button" id="btnDinheiro" class="opcao">
+          <span class="opcao-nome">Dinheiro</span>
+          <span class="icone">
+            <img src="/public/images/dinheiro.svg" alt="Nota de Dinheiro">
+          </span>
+        </button>
+
+      </div>
+
+      <p class="total" id="total" aria-live="polite">Total 0,00</p>
+    </section>
+
+  </main>
+
+  <script src="telaPagamento.js"></script>
+</body>
+</html>
