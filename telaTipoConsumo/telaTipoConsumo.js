@@ -3,10 +3,10 @@
    ===================================================== */
 
 // ----- Configurações (ajuste os nomes das suas outras telas) -----
-const PAGINA_VOLTAR = "telaDescanso.html";
-const PAGINA_COMER_AGORA = "telaPrincipal.html";
+const PAGINA_VOLTAR = "../telaDescanso/telaDescanso.html";
+const PAGINA_COMER_AGORA = "../telaPrincipal/telaPrincipal.html";
 
-const PAGINA_AGENDAR_PEDIDO = "telaHorario.html";
+const PAGINA_AGENDAR_PEDIDO = "../telaHorario/telaHorario.html";
 
 
 // ----- Elementos -----

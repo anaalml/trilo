@@ -18,8 +18,8 @@
    ===================================================== */
 
 // ----- Configurações (ajuste os nomes das suas outras telas) -----
-const PAGINA_VOLTAR = "telaTipoConsumo.html";   // vazio = volta no histórico do navegador
-const PAGINA_APOS_CONCLUIR = "telaItemPedido.html";
+const PAGINA_VOLTAR = "../telaTipoConsumo/telaTipoConsumo.html";   // vazio = volta no histórico do navegador
+const PAGINA_APOS_CONCLUIR = "../telaItemPedido/telaItemPedido.html";
 const USAR_DADOS_DE_EXEMPLO = true;       // coloque false quando o cadastro estiver pronto
 
 // ----- Dados de exemplo (só para testar a tela) -----

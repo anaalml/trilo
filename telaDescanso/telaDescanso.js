@@ -7,7 +7,7 @@
    ===================================================== */
 
 // ----- Configurações -----
-const PAGINA_PROXIMA = "telaTipoConsumo.html";
+const PAGINA_PROXIMA = "../telaTipoConsumo/telaTipoConsumo.html";
 const DISTANCIA_MAXIMA = 450;   // até onde a barra sobe (800 - 450 = 350px, topo do painel da próxima tela)
 const DISTANCIA_MINIMA = 140;   // arrastou menos que isso: a barra volta para baixo
 

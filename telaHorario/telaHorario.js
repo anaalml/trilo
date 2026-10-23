@@ -10,9 +10,9 @@
    ===================================================== */
 
 // ----- Configurações (ajuste os nomes das suas outras telas) -----
-const PAGINA_TIPO_CONSUMO = "telaTipoConsumo.html";     // Voltar (fluxo normal)
-const PAGINA_APOS_CONFIRMAR = "telaPrincipal.html";     // depois de confirmar (fluxo normal)
-const PAGINA_ITEM_PEDIDO = "telaItemPedido.html";       // Voltar/confirmar no modo edição
+const PAGINA_TIPO_CONSUMO = "../telaTipoConsumo/telaTipoConsumo.html";     // Voltar (fluxo normal)
+const PAGINA_APOS_CONFIRMAR = "../telaPrincipal/telaPrincipal.html";     // depois de confirmar (fluxo normal)
+const PAGINA_ITEM_PEDIDO = "../telaItemPedido/telaItemPedido.html";       // Voltar/confirmar no modo edição
 
 const HORA_MINIMA = 7;
 const HORA_MAXIMA = 23;     // 23:00 é o último horário (só com minutos 00)

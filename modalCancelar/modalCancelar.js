@@ -16,7 +16,7 @@
 
 (function () {
   // ----- Configurações -----
-  const PAGINA_DESCANSO = "telaDescanso.html";
+  const PAGINA_DESCANSO = "../telaDescanso/telaDescanso.html";
 
   // Dados do cadastro (cardápio) que NÃO devem ser apagados ao cancelar.
   const CHAVES_MANTIDAS = ["trilo_categorias", "trilo_produtos"];

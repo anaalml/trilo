@@ -358,6 +358,7 @@ button:focus-visible {
   justify-content: center;
   border: none;
   background: transparent;
+  pointer-events: none;
 }
 
 .miniatura-remover svg {

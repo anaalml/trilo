@@ -12,8 +12,8 @@
    ===================================================== */
 
 // ----- Configurações (ajuste os nomes das suas outras telas) -----
-const PAGINA_HORARIO = "telaHorario.html?editar=1";   // botão "Editar" do horário
-const PAGINA_APOS_CONCLUIR = "telaPagamento.html";
+const PAGINA_HORARIO = "../telaHorario/telaHorario.html?editar=1";   // botão "Editar" do horário
+const PAGINA_APOS_CONCLUIR = "../telaPagamento/telaPagamento.html";
 const USAR_DADOS_DE_EXEMPLO = true;              // só para testar a tela sem passar pela telaPrincipal
 
 const CHAVE_PEDIDO = "trilo_pedido";

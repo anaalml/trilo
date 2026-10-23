@@ -4,7 +4,7 @@
 
 // ----- Configurações (ajuste os nomes das suas outras telas) -----
 const PAGINA_PIX = "";                         // ex.: "telaPix.html"
-const PAGINA_CARTAO = "telaCartoes.html";
+const PAGINA_CARTAO = "../telaCartoes/telaCartoes.html";
 const PAGINA_DINHEIRO = "";                    // ex.: "telaDinheiro.html"
 
 const USAR_DADOS_DE_EXEMPLO = true;            // só para testar sem passar pelas telas anteriores
